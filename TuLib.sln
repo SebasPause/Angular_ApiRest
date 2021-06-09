@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31019.35
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TuLib", "TuLib\TuLib.csproj", "{CC3BC546-C011-483B-88A9-F5A6958DE269}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TuLib.Model", "TuLib.Model\TuLib.Model.csproj", "{2839AC9D-5378-4103-A5CD-3F74873F8BB7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CC3BC546-C011-483B-88A9-F5A6958DE269}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC3BC546-C011-483B-88A9-F5A6958DE269}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC3BC546-C011-483B-88A9-F5A6958DE269}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC3BC546-C011-483B-88A9-F5A6958DE269}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2839AC9D-5378-4103-A5CD-3F74873F8BB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2839AC9D-5378-4103-A5CD-3F74873F8BB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2839AC9D-5378-4103-A5CD-3F74873F8BB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2839AC9D-5378-4103-A5CD-3F74873F8BB7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A756679B-47AC-48D1-9E12-612FB9AD4061}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,59 @@
+<app-menu></app-menu>
+<div style="width:100%;">
+  <div class="row">
+    <div style="margin-top:2%">
+      <h1>REGISTRO</h1>
+      <img src="../../../assets/icono.png">
+      <p><em><strong>Registro desarrollado con Web API y Angular</strong></em></p>
+    </div>
+  </div>
+  <div class="col-md-2" style="text-align: center;margin-left:auto;margin-right:auto;">
+    <form [formGroup]="service.formModel" autocomplete="off" (submit)="onSubmit()">
+      <div class="form-group required">
+        <label class="text">Usuario</label>
+        <input class="form-control" formControlName="UserName" />
+        <label class="text-danger" *ngIf="service.formModel.get('UserName').touched && service.formModel.get('UserName').errors?.required">
+          Este campo es obligatorio
+        </label>
+      </div>
+      <div class="form-group required">
+        <label class="text">Correo</label>
+        <input class="form-control" formControlName="Email" />
+        <label class="text-danger" *ngIf="service.formModel.get('Email').touched && service.formModel.get('Email').errors?.email">
+          Correo no válido
+        </label>
+      </div>
+      <div class="form-group">
+        <label class="text">Nombre Completo</label>
+        <input class="form-control" formControlName="FullName" />
+      </div>
+      <div formGroupName="Passwords">
+        <div class="form-group required">
+          <label class="text">Contraseña</label>
+          <input type="password" class="form-control" formControlName="Password" />
+          <label class="text-danger" *ngIf="service.formModel.get('Passwords.Password').touched && service.formModel.get('Passwords.Password').errors?.required">
+            Este campo es obligatorio
+          </label>
+          <label class="text-danger" *ngIf="service.formModel.get('Passwords.Password').touched && service.formModel.get('Passwords.Password').errors?.minlength">
+            Minimo 4 caracteres
+          </label>
+        </div>
+        <div class="form-group required">
+          <label class="text">Repite Contraseña</label>
+          <input type="password" class="form-control" formControlName="ConfirmPassword" />
+          <label class="text-danger" *ngIf="service.formModel.get('Passwords.ConfirmPassword').touched && service.formModel.get('Passwords.ConfirmPassword').errors?.required">
+            Este campo es obligatorio
+          </label>
+          <label class="text-danger" *ngIf="service.formModel.get('Passwords.ConfirmPassword').touched && service.formModel.get('Passwords.ConfirmPassword').errors?.passwordMismatch">
+            Las contraseñas no coinciden
+          </label>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group.col-md-8.offset-md-2" style="margin-top:10px;">
+          <button type="submit" class="btn-primary btn-lg btn-block" [disabled]="!service.formModel.valid">Enviar</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

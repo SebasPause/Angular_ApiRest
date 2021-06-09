@@ -1,0 +1,17 @@
+<table style="padding:10px;margin:auto;width:60vw" class='table table-striped tablelevels'>
+  <tbody>
+    <tr>
+      <th style="text-align:center">{{selectedPage.nrPagina}}</th>
+    </tr>
+    <tr style="width: 100vw; height: 70vh; margin: 20vh;background-color:azure">
+      <td style="font-size:40px">{{selectedPage.contenido}}</td>
+    </tr>
+    <tr>
+      <td><button (click)="retroceder()" style="float:left"><</button><button (click)="avanzar()" style="float:right">></button></td>
+    </tr>
+    <tr>
+      <td style="margin:auto;text-align:center" ><button routerLink="/libros" >Volver</button>
+    </tr>
+  </tbody>
+</table>
+

@@ -1,0 +1,33 @@
+<app-menu-loggued></app-menu-loggued>
+<div class="contenendor">
+  <table style="padding:10px" class='table table-striped tablelevels'>
+    <tbody>
+      <tr>
+        <th>Titulo</th>
+        <th>Autor</th>
+        <th>Descripcion</th>
+        <th>Fecha publicación</th>
+        <th>Publicado</th>
+        <th>Paginas</th>
+        <th>Estado</th>
+        <th>Contenido</th>
+        <th>Comentarios</th>
+        <th>Publicar</th>
+        <th>Quitar Publicación</th>
+      </tr>
+      <tr *ngFor="let item of books">
+        <td>{{item.titulo}}</td>
+        <td>{{item.autor}}</td>
+        <td>{{item.descripcion}}</td>
+        <td>{{item.fechaPublicado}}</td>
+        <td style="text-align:center">{{item.publicado}}</td>
+        <td style="text-align:center">{{item.nrPaginas}}</td>
+        <td [style.color]="getColor(item.estado)">{{item.estado}}</td>
+        <td style="text-align:center"><button (click)="verContenido(item.bookID)">Ver</button></td>
+        <td style="text-align:center"><button (click)="verComentarios(item.bookID)">Ver</button></td>
+        <td style="text-align:center"><button (click)="publicar(item,true)">Acción</button></td>
+        <td style="text-align:center"><button (click)="quitarPublicacion(item,false)">Acción</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

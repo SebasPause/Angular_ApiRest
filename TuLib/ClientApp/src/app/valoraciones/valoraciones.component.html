@@ -1,0 +1,15 @@
+<table style="padding:10px" class='table table-striped tablelevels'>
+  <tbody>
+    <tr>
+      <th>Comentario</th>
+      <th>Valor</th>
+      <th>Accion</th>
+    </tr>
+    <tr *ngFor="let item of comments">
+      <td>{{item.comentario}}</td>
+      <td>{{item.valor}}</td>
+      <td><button (click)="borrar(item.id)">Borrar</button></td>
+    </tr>
+  </tbody>
+</table>
+<button style="text-align:center;left:46%;margin:auto;position:absolute" routerLink="/libros">Volver</button>

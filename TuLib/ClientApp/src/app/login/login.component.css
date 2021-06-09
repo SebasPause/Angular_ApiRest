@@ -1,0 +1,9 @@
+.row {
+  text-align: center;
+}
+
+.text {
+  width: 100%;
+  font-weight: bold;
+  font-size: 20px;
+}
